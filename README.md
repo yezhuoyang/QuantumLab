@@ -213,6 +213,19 @@ The transpiled circuit is shown as:
 ![alt text](Figure/transpiled_circuit.png)
 
 
+You can also draw the layout and visulize the mapping of the virtual qubit to the real qubit by:
+
+```python
+from qiskit.visualization import plot_circuit_layout
+fig=plot_circuit_layout(transpiled_circuit,backend)   
+
+# Save the figure to a file, e.g., as 'layout.png'
+fig.savefig('Figure/layout.png')
+```
+
+![alt text](Figure/layout.png)
+
+
 The result of the above simulation is:
 
 ![alt text](Figure/histogramnoise.png)
