@@ -208,6 +208,12 @@ counts = job.result().get_counts()
 plot_histogram(counts)
 ```
 
+The transpiled circuit is shown as:
+
+![alt text](Figure/transpiled_circuit.png)
+
+
+The result of the above simulation is:
 
 ![alt text](Figure/histogramnoise.png)
 
