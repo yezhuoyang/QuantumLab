@@ -6,3 +6,4 @@ jupyterlab==4.2.2
 notebook==7.2.1
 matplotlib==3.9.0
 pylatexenc==2.10
+termcolor==2.4.0
