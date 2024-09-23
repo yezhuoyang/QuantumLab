@@ -1,5 +1,5 @@
 # IBMLab
-This is the IBM lab repo of quantum progamming course taught by professor Jens Palsberg
+This is the IBM lab repo of quantum progamming course CS238 taught by professor Jens Palsberg in 2024 Fall quarter.
 
 
 # Environment set up
@@ -88,7 +88,7 @@ Sometimes you may want to store the figure to your local computer, to do that, p
 qc.draw('mpl',filename='filename.png')
 ```
 
-(Here a figure should be included)
+![alt text](Figure/qcexample.png)
 
 
 If you are curious about the matrix of your circuit, you can get it by running the following commands:
@@ -131,7 +131,7 @@ qc.append(subqc,[1,2])
 ```
 
 
-(Here a figure should be included)
+![alt text](Figure/subqc.png)
 
 
 ## Run simulation and plot results
@@ -154,7 +154,8 @@ qc.measure([0,1,2],[0,1,2]) # Add measurement on the computational basis.
 qc.draw("mpl")
 ```
 
-(A figure here)
+![alt text](Figure/measurement.png)
+
 
 To run the ideal simulation and get the result, we need to include a backend AerSimulator
 
@@ -169,7 +170,9 @@ output = job.result().get_counts()
 plot_histogram(output) #Plot the result
 ```
 
-(A figure here)
+![alt text](Figure/histogram.png)
+
+
 
 
 
