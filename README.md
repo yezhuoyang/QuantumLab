@@ -178,8 +178,38 @@ plot_histogram(output) #Plot the result
 
 ## Simulation on fake provider
 
+In this lab, you are required to run your simulation on IBM fake provider, which simulate the real noisy environment on a superconducting quantum computer. 
 
 
+```python
+from qiskit import QuantumCircuit, transpile
+from qiskit.providers.fake_provider import GenericBackendV2
+from qiskit.visualization import plot_histogram
+ 
+# Generate a 20-qubit simulated backend
+backend = GenericBackendV2(num_qubits=20)
+ 
+
+qc=QuantumCircuit(3,3) # Initialize a circuit with 3 qubits and 2 classical bits
+qc.x(0) #Add PauliX gate to qubit 0
+qc.h(1) #Add Hadamard gate to qubit 1
+qc.cx(0,1) #Add a CNOT gate to qubit 0,1 controlled by qubit 0
+qc.cx(2,1) #Add a CNOT gate to qubit 2,1 controlled by qubit 2
+qc.barrier()
+qc.measure([0,1,2],[0,1,2]) # Add measurement on the computational basis.
+ 
+# Transpile the ideal circuit to a circuit that can be directly executed by the backend
+transpiled_circuit = transpile(qc, backend)
+transpiled_circuit.draw('mpl')
+ 
+# Run the transpiled circuit using the simulated backend
+job = backend.run(transpiled_circuit,shots=1000)
+counts = job.result().get_counts()
+plot_histogram(counts)
+```
+
+
+![alt text](Figure/histogramnoise.png)
 
 
 
