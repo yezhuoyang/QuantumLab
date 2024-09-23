@@ -1,6 +1,8 @@
 qiskit==1.1.1
+qiskit-aer==0.15.1
 qutip==5.0.2
 numpy==1.26.4
 jupyterlab==4.2.2
 notebook==7.2.1
 matplotlib==3.9.0
+pylatexenc==2.10
