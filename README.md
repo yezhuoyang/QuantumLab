@@ -33,19 +33,17 @@ After create the virtual enviroment, you can activate it by running the followin
 
 
 ```console
-python -m venv ./IBMLabVenv
+.\IBMLabVenv\Scripts\activate
 ```
 
 
-
-I use the python version 3.12.4. Please make sure that you have installed the latest pip and install all required package by:
+Install all required package by:
 
 
 ```console
-py -m pip install -r requirements.txt 
+pip install -r requirements.txt 
 ```
 
-Please make sure that you can execute the jupyter notebook through your web browser or inside IDE like visual studio 
 
 
 # Run Jupyter note book
@@ -58,10 +56,21 @@ First, activate you jupyter notebook
 # IBM Lab1: Quantum Circuits
 
 
+In this lab, you will learn and practice how to create quantum circuit and implement basic logic gates.
+
+
+
 # IBM Lab2: Accuracy of Quantum Phase Estimation
 
 
+In this lab, you will implement quantum phase estimtation.
+
+
+
 # IBM Lab3: Scalable Shor's algorithm
+
+
+In this lab, you will learn how to implement scalable shor's algorithm.
 
 
 
