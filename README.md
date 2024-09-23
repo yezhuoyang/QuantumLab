@@ -94,10 +94,10 @@ qc.draw('mpl',filename='filename.png')
 If you are curious about the matrix of your circuit, you can get it by running the following commands:
 
 ```python
-qc.draw('mpl')
+from qiskit.quantum_info import Operator
+U = Operator(qc)
+print(U.data)
 ```
-
-
 
 
 Another way to add quantum gates is by calling method append method:
@@ -131,21 +131,52 @@ qc.append(subqc,[1,2])
 ```
 
 
-If you want to debug 
-
-
+(Here a figure should be included)
 
 
 ## Run simulation and plot results
 
 QuantumCircuit class that we initialized above won't calculate automatically for you. To execute your circuit, you have to run it by yourselves.
+A quantum citcuit in qiskit has both quantum registers and classical registers, the measurement result is stored in classical register.
+
+
+To run simulation, don't foget to add measurement:
+
+```python
+from qiskit import QuantumCircuit
+qc=QuantumCircuit(3,3) # Initialize a circuit with 3 qubits and 2 classical bits
+qc.x(0) #Add PauliX gate to qubit 0
+qc.h(1) #Add Hadamard gate to qubit 1
+qc.cx(0,1) #Add a CNOT gate to qubit 0,1 controlled by qubit 0
+qc.cx(2,1) #Add a CNOT gate to qubit 2,1 controlled by qubit 2
+qc.barrier()
+qc.measure([0,1,2],[0,1,2]) # Add measurement on the computational basis.
+qc.draw("mpl")
+```
+
+(A figure here)
+
+To run the ideal simulation and get the result, we need to include a backend AerSimulator
+
+
+you can run the following codes:
+```python
+from qiskit_aer import AerSimulator
+from qiskit.visualization import plot_histogram
+backend = AerSimulator()
+job = backend.run(qc, shots=1000) # Run the circuit 1000 times 
+output = job.result().get_counts() 
+plot_histogram(output) #Plot the result
+```
+
+(A figure here)
 
 
 
 ## Simulation on fake provider
 
 
-Transpilation
+
 
 
 
