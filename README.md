@@ -49,7 +49,7 @@ pip install -r requirements.txt
 # Run Jupyter note book
 
 
-First, activate you jupyter notebook 
+First, activate you jupyter notebook in your console with activated virtual environment.
 
 
 
@@ -78,4 +78,6 @@ In this lab, you will learn how to implement scalable shor's algorithm.
 
 
 
+
+# Reference
 
