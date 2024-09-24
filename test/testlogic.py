@@ -271,7 +271,8 @@ def testOR():
         print(colored('OOPS, OR Test failed! ','red')+"\U0001F923")    
 
 
-
+def testANDOR():
+    pass
 
 
 

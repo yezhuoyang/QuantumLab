@@ -174,6 +174,24 @@ plot_histogram(output) #Plot the result
 
 
 
+## Simulation with customized noise model
+
+You are asked to run your circuit simulation with some noise level.
+
+
+you can run the following codes:
+```python
+from qiskit_aer import AerSimulator
+from qiskit.visualization import plot_histogram
+from .noisemodel import construct_bitphaseflip_noise_model
+backend = AerSimulator()
+noise_model=construct_bitphaseflip_noise_model(0.1,0.1,0.1)
+job = backend.run(qc, shots=1000,noise_model=noise_model) # Run the circuit 1000 times 
+output = job.result().get_counts() 
+plot_histogram(output) #Plot the result
+```
+
+
 
 
 ## Simulation on fake provider
