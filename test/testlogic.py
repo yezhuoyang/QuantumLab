@@ -277,6 +277,8 @@ def testANDOR():
 
 
 
+
+
 if __name__ == '__main__':
     print("-----------Strating the tests of IBM Lab1: logical gates-----------")
     testNOT()
