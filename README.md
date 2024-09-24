@@ -255,11 +255,10 @@ The result of the above simulation is:
 
 
 In this lab, you will learn and practice how to create quantum circuit and implement basic logic gates, such as AND, OR, XOR gate. 
-
+We will grade you partly by the correctness of logical gate implementation.
 
 
 # IBM Lab2: Accuracy of Quantum Phase Estimation
-
 
 In this lab, you will implement quantum phase estimtation.
 
