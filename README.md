@@ -1,5 +1,13 @@
 # IBMLab
 This is the IBM lab repo of quantum progamming course CS238 taught by professor Jens Palsberg in 2024 Fall quarter.
+In this lab, you will have hands-on experience of quantum programming with qiskit. 
+
+In this lab, you will
+
+* Learn how to create and compile a quantum circuit by yourselves with qiskit.
+* Learn how to run and debug your quantum circuit by running simulation.
+* Get more familiar with quantum gates, quantum fourier transform, quantum phase estimation and shor's algorithm
+* Learn how to run simulation of your quantum algorithm on a noisy fake quantum computer provided by qiskit.
 
 
 # Environment set up
