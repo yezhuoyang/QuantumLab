@@ -1,4 +1,4 @@
-# IBMLab
+# QuantumLab
 This is the IBM lab repo of quantum progamming course CS238 taught by professor Jens Palsberg in 2024 Fall quarter.
 In this lab, you will have hands-on experience of quantum programming with qiskit. 
 
