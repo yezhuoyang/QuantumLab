@@ -85,30 +85,10 @@ qc.h(1) #Add Hadamard gate to qubit 1
 qc.cx(0,1) #Add a CNOT gate to qubit 0,1 controlled by qubit 0
 ```
 
-Visualization is a good way to debug your circuit interactively. Qiskit has implemented a built-in method draw for visualization:
-```python
-qc.draw('mpl')
-```
-
-Sometimes you may want to store the figure to your local computer, to do that, pass another parameter filename to the draw method:
-
-```python
-qc.draw('mpl',filename='filename.png')
-```
-
-![alt text](Figure/qcexample.png)
 
 
-If you are curious about the matrix of your circuit, you can get it by running the following commands:
 
-```python
-from qiskit.quantum_info import Operator
-U = Operator(qc)
-print(U.data)
-```
-
-
-Another way to add quantum gates is by calling method append method:
+Or by calling method append method:
 
 ```python
 from qiskit.circuit.library import XGate,HGate,CXGate
@@ -137,6 +117,31 @@ subqc.cx(0,1)
 # Here, the 0th qubit of subqc is mapped to the 1th qubit, the 1th qubit of subqc is mapped to the 2nd qubit
 qc.append(subqc,[1,2]) 
 ```
+
+Visualization is a good way to debug your circuit interactively. Qiskit has implemented a built-in method draw for visualization:
+```python
+qc.draw('mpl')
+```
+
+Sometimes you may want to store the figure to your local computer, to do that, pass another parameter filename to the draw method:
+
+```python
+qc.draw('mpl',filename='filename.png')
+```
+
+![alt text](Figure/qcexample.png)
+
+
+If you are curious about the matrix of your circuit, you can get it by running the following commands:
+
+```python
+from qiskit.quantum_info import Operator
+U = Operator(qc)
+print(U.data)
+```
+
+
+
 
 
 ![alt text](Figure/subqc.png)
