@@ -218,6 +218,57 @@ def OR(inp1,inp2):
     return qc, output
 
 
+
+def ANDOR(inp1,inp2,inp3):
+    """An (x AND y)OR x gate.
+    
+    Parameters:
+        inp1 for x, inp2 for y, inp3 for z: Input, encoded in qubit 0,1,2.
+        
+    Returns:
+        QuantumCircuit: Output (x AND y)OR x circuit. The output should be set to qubit 3(the last qubit)
+        str: Output value measured from qubit 0.
+    """
+
+    qc = QuantumCircuit(4, 1) # A quantum circuit with a single qubit and a single classical bit
+    qc.reset(0)
+    
+    # We encode '0' as the qubit state |0⟩, and '1' as |1⟩
+    # Since the qubit is initially |0⟩, we don't need to do anything for an input of '0'
+    # For an input of '1', we do an x to rotate the |0⟩ to |1⟩
+    if inp1=='1':
+        qc.x(0)
+    if inp2=='1':
+        qc.x(1)
+    if inp3=='1':
+        qc.x(2)
+        
+    # barrier between input state and gate operation 
+    qc.barrier()
+
+
+    # Your code for ANDOR gate goes here
+
+    
+    #barrier between gate operation and measurement
+    qc.barrier()
+    
+    # Finally, we extract the |0⟩/|1⟩ output of the qubit and encode it in the bit c[0]
+    qc.measure(3,0)
+    qc.draw()
+    
+    # We'll run the program on a simulator
+    backend = AerSimulator()
+    # Since the output will be deterministic, we can use just a single shot to get it
+    job = backend.run(qc, shots=1, memory=True)
+    output = job.result().get_memory()[0]
+    
+    return qc, output
+
+
+
+
+
 def testNOT():
     qc1, output1 = NOT('1')
     qc0, output0 = NOT('0')    
@@ -272,8 +323,18 @@ def testOR():
 
 
 def testANDOR():
-    pass
-
+    for inp1 in ['0','1']:
+        for inp2 in ['0','1']:
+            for inp3 in ['0','1']:
+                qc, output = ANDOR(inp1,inp2,inp2)
+                output=int(output)
+                correctoutput=(int(inp1) and int(inp2)) or int(inp3)
+                if output==correctoutput:
+                    print(colored('Congrats, ANDOR Test passed for '+inp1+" "+inp2+" "+inp3,'green')+"\U0001f600")
+                else:
+                    print(colored('OOPS, OR Test failed for '+inp1+" "+inp2+" "+inp3,'red')+"\U0001F923")  
+    return
+                 
 
 
 
@@ -286,6 +347,7 @@ if __name__ == '__main__':
     testAND()
     testNAND()
     testOR()
+    testANDOR()
     print("--------------------------Your score is:--------------------------")    
 
 
