@@ -12,6 +12,13 @@ In this lab, you will
 
 # Environment set up
 
+
+The installation process has been tested under python version 3.11
+If there is some bug during your installation, please downgrade your python to 3.11 first
+
+https://www.python.org/downloads/release/python-3110/
+
+
 I suggest that you should create a new lightweight virtual environment to avoid conflict of packgae dependency.
 First, please ensure that you have installed virtialenv:
 
