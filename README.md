@@ -277,6 +277,17 @@ The result of the above simulation is:
 In this lab, you will learn and practice how to create quantum circuit and implement basic logic gates, such as AND, OR, XOR gate. 
 We will grade you partly by the correctness of logical gate implementation.
 
+To run autotest your self for function NOT,AND,NAND,OR,ANDOR for yourself, you can copy your implemention to test/testlogic.py file and excute the script directly.
+
+```console
+cd test
+python testlogic.py
+```
+
+
+
+
+
 
 # IBM Lab2: Accuracy of Quantum Phase Estimation
 
