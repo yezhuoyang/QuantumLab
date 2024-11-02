@@ -301,10 +301,10 @@ def testAND():
 
 
 def testNAND():
-    qc00, output00 = AND('0','0')
-    qc01, output01 = AND('0','1')   
-    qc10, output10 = AND('1','0')
-    qc11, output11 = AND('1','1')   
+    qc00, output00 = NAND('0','0')
+    qc01, output01 = NAND('0','1')   
+    qc10, output10 = NAND('1','0')
+    qc11, output11 = NAND('1','1')   
     if output01 == '1' and output10 == '1' and output11 == '0' and output00 == '1':
         print(colored('Congrats, NAND Test passed ','green')+"\U0001f600")
     else:
