@@ -34,7 +34,9 @@ def qft(n):
 
 def qc4():
     ## Start your code to create the circuit
-    circuit=QuantumCircuit(5, 4)
+    n=0 #How many qubit you want to use?
+    m=0 #How many classical bits your want to use?
+    circuit=QuantumCircuit(n, m)
 
 
     ##Your circuit construction goes here:
@@ -59,7 +61,29 @@ def qc4():
 
 
 def qc4improved():
-    pass
+    ## Start your code to create the circuit
+    n=0 #How many qubit you want to use?
+    m=0 #How many classical bits your want to use?
+    circuit=QuantumCircuit(n, m)
+
+
+    ##Your circuit construction goes here:
+
+
+    ##Your circuit construction ends here
+
+
+    # We'll run the program on a simulator
+    backend = AerSimulator()
+
+    # Transpile the ideal circuit to a circuit that can be directly executed by the backend
+    transpiled_circuit = transpile(circuit, backend)
+
+    # Since the output will be deterministic, we can use just a single shot to get it
+    job = backend.run(transpiled_circuit, shots=1000, memory=True)
+    output = job.result().get_counts()
+
+    return circuit, output
 
 
 
@@ -67,16 +91,26 @@ def qc4improved():
 def testqc4():
     circuit,output=qc4()
     result=max(output, key=output.get)
-    if(result=='0101'):
+    phase=int(result, base=2)/(2**(len(result)))
+    answer=1/3
+    diff=abs(phase-answer)
+    if(diff/(answer))<(2**(-2)):
         print(colored('Congrats, qc4 Test passed ','green')+"\U0001f600")
     else:
-        print(colored('OOPS, qc4 Test failed! Your result '+result+" is not correct!",'red')+"\U0001F923")    
+        print(colored('OOPS, qc Test failed! Your estimated phase is '+str(phase)+" is not accurate enough!",'red')+"\U0001F923")      
 
 
 
 def testqc4improved():
-    pass
-
+    circuit,output=qc4improved()
+    result=max(output, key=output.get)
+    phase=int(result, base=2)/(2**(len(result)))
+    answer=1/3
+    diff=abs(phase-answer)
+    if (diff/(answer))<(2**(-3)):
+        print(colored('Congrats, qc4improved Test passed ','green')+"\U0001f600")
+    else:
+        print(colored('OOPS, qcimproved Test failed! Your estimated phase is '+str(phase)+" is not accurate enough!",'red')+"\U0001F923")    
 
 
 
@@ -85,7 +119,7 @@ def testqc4improved():
 
 if __name__ == '__main__':
     print("-----------Strating the tests of IBM Lab2: Quantum phase estimation-----------")
-
     testqc4()
-    print("--------------------------Your score is:--------------------------")    
+    testqc4improved()
+    #print("--------------------------Your score is:--------------------------")    
 
