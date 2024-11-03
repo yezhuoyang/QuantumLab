@@ -292,7 +292,12 @@ python testlogic.py
 # IBM Lab2: Accuracy of Quantum Phase Estimation
 
 In this lab, you will implement quantum phase estimtation.
+To run autotest your self for function qc4, qc4improved for yourself, you can copy your implemention to test/testPhaseEstimation.py file and excute the script directly.
 
+```console
+cd test
+python testPhaseEstimation.py
+```
 
 
 # IBM Lab3: Scalable Shor's algorithm
