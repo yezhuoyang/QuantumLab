@@ -93,9 +93,4 @@ def construct_bitphaseflip_noise_model(p_reset, p_meas, p_gate1):
     noise_bitphase_flip.add_all_qubit_quantum_error(error_gate1_bit, ["t","tdg"])
     noise_bitphase_flip.add_all_qubit_quantum_error(error_gate2_bit, ["cx"])
 
-    noise_bitphase_flip.add_all_qubit_quantum_error(error_reset, "reset")
-    noise_bitphase_flip.add_all_qubit_quantum_error(error_meas, "measure")
-    noise_bitphase_flip.add_all_qubit_quantum_error(error_gate1, ["t","tdg"])
-    noise_bitphase_flip.add_all_qubit_quantum_error(error_gate2, ["cz"])
-
     return noise_bitphase_flip
