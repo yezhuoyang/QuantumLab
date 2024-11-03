@@ -292,7 +292,7 @@ python testlogic.py
 # IBM Lab2: Accuracy of Quantum Phase Estimation
 
 In this lab, you will implement quantum phase estimtation.
-To run autotest your self for function qc4, qc4improved for yourself, you can copy your implemention to test/testPhaseEstimation.py file and excute the script directly.
+To run autotest by yourself for function qc4, qc4improved for yourself, you can copy your implemention to test/testPhaseEstimation.py file and excute the script directly.
 
 ```console
 cd test
@@ -303,7 +303,13 @@ python testPhaseEstimation.py
 # IBM Lab3: Scalable Shor's algorithm
 
 
-In this lab, you will learn how to implement scalable shor's algorithm.
+In this lab, you will learn how to implement scalable shor's algorithm. Specifically, you will implement the Shor's algorithm of factoring 15,21 and 63.
+We will provide you the function and circuit of factoring 15. You are asked to implement the rest two. To run autotest by yourself, you can copy your implementation of Shor21,Shor63 to test/testShor.py file and excute the script directly:
+
+```console
+cd test
+python testShor.py
+```
 
 
 
