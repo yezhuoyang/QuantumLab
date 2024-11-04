@@ -220,13 +220,13 @@ def OR(inp1,inp2):
 
 
 def ANDOR(inp1,inp2,inp3):
-    """An (x AND y)OR x gate.
+    """An (x AND y)OR z gate.
     
     Parameters:
         inp1 for x, inp2 for y, inp3 for z: Input, encoded in qubit 0,1,2.
         
     Returns:
-        QuantumCircuit: Output (x AND y)OR x circuit. The output should be set to qubit 3(the last qubit)
+        QuantumCircuit: Output (x AND y)OR z circuit. The output should be set to qubit 3(the last qubit)
         str: Output value measured from qubit 0.
     """
 
@@ -326,13 +326,13 @@ def testANDOR():
     for inp1 in ['0','1']:
         for inp2 in ['0','1']:
             for inp3 in ['0','1']:
-                qc, output = ANDOR(inp1,inp2,inp2)
+                qc, output = ANDOR(inp1,inp2,inp3)
                 output=int(output)
                 correctoutput=(int(inp1) and int(inp2)) or int(inp3)
                 if output==correctoutput:
                     print(colored('Congrats, ANDOR Test passed for '+inp1+" "+inp2+" "+inp3,'green')+"\U0001f600")
                 else:
-                    print(colored('OOPS, OR Test failed for '+inp1+" "+inp2+" "+inp3,'red')+"\U0001F923")  
+                    print(colored('OOPS, ANDOR Test failed for '+inp1+" "+inp2+" "+inp3,'red')+"\U0001F923")  
     return
                  
 
