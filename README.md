@@ -146,12 +146,17 @@ qc.draw('mpl',filename='filename.png')
 
 <!-- ![alt text](Figure/qcexample.png) -->
 
-<div align="center" style="border:1px solid #0c2255ff; padding:10px; margin:15px 0;">
+
+| ![Example quantum circuit diagram](Figure/qcexample.png) |
+|:-------------------------------------------------------:|
+| *Figure 1: The output visualization of the defined circuit Example. Qiskit both dipicts quantum registers(q) and classcal registers(c).*     |
+
+<!-- <div align="center" style="border:1px solid #0c2255ff; padding:10px; margin:15px 0;">
 
 <img src="Figure/qcexample.png" alt="Example quantum circuit diagram" width="200"/><br>
 <em>Figure 1: The output visualization of the defined circuit Example. Qiskit both dipicts quantum registers(q) and classcal registers(c).</em>
 
-</div>
+</div> -->
 
 
 If you want to see the unitary matrix representation of your circuit:
