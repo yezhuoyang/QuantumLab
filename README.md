@@ -144,7 +144,9 @@ To save the diagram as an image file, include a filename:
 qc.draw('mpl',filename='filename.png')
 ```
 
-![alt text](Figure/qcexample.png)
+<!-- ![alt text](Figure/qcexample.png) -->
+
+<p align="center"> <img src="Figure/qcexample.png" alt="Example quantum circuit diagram" width="500"/><br> <em>Figure 1: Example circuit visualization in Qiskit</em> </p>
 
 
 If you want to see the unitary matrix representation of your circuit:
@@ -157,7 +159,9 @@ print(U.data)
 
 
 
-![alt text](Figure/subqc.png)
+<!-- ![alt text](Figure/subqc.png) -->
+
+<p align="center"> <img src="Figure/subqc.png" alt="Matrix representation of subcircuit" width="500"/><br> <em>Figure 2: Matrix representation of the subcircuit</em> </p>
 
 
 ## Run simulation and plot results
@@ -185,7 +189,9 @@ qc.measure([0,1,2],[0,1,2]) # Add measurement on the computational basis.
 qc.draw("mpl")
 ```
 
-![alt text](Figure/measurement.png)
+<!-- ![alt text](Figure/measurement.png) -->
+
+<p align="center"> <img src="Figure/measurement.png" alt="Circuit with measurements" width="500"/><br> <em>Figure 3: Adding measurement operations</em> </p>
 
 
 To run an **ideal (noise-free) simulation** and obtain the results, we use the `AerSimulator` backend.  
@@ -200,7 +206,9 @@ output = job.result().get_counts()
 plot_histogram(output) #Plot the result
 ```
 
-![alt text](Figure/histogram.png)
+<p align="center"> <img src="Figure/histogram.png" alt="Simulation result histogram" width="500"/><br> <em>Figure 4: Ideal simulation result histogram</em> </p>
+
+<!-- ![alt text](Figure/histogram.png) -->
 
 
 
@@ -223,8 +231,10 @@ output = job.result().get_counts()
 plot_histogram(output) #Plot the result
 ```
 
-![alt text](Figure/noisemodelexample.png)
+<!-- ![alt text](Figure/noisemodelexample.png) -->
 
+
+<p align="center"> <img src="Figure/noisemodelexample.png" alt="Noisy simulation histogram" width="500"/><br> <em>Figure 5: Simulation with a customized noise model</em> </p>
 
 ## Simulation on fake provider
 
@@ -261,7 +271,10 @@ plot_histogram(counts)
 
 The transpiled circuit looks like this:
 
-![alt text](Figure/transpiled_circuit.png)
+<!-- ![alt text](Figure/transpiled_circuit.png) -->
+
+
+<p align="center"> <img src="Figure/transpiled_circuit.png" alt="Transpiled circuit diagram" width="500"/><br> <em>Figure 6: Transpiled circuit for the fake backend</em> </p>
 
 You can also visualize how the virtual qubits in your circuit are mapped to the physical qubits of the backend:
 
