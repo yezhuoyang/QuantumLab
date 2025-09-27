@@ -236,7 +236,7 @@ plot_histogram(output) #Plot the result
 
 | <img src="Figure/histogram.png" alt="Simulation result histogram" width="300"/> |
 |:--------------------------------------------------------------------------:|
-| *Figure 4: Ideal simulation result histogram with 1000 shots. X axis stands for the collapsed basis states after measurement. Y asis stands for the frequency, or counts, or the this states. Note that in qiskit, qubits are ordered using little-endian notation, so 001 means q0 collapse to $\ket{1}$, and q1, q2 collapse to $\ket{0}$,   011 means q0,q1 collapse to $\ket{1}$, and q2 collapse to $\ket{0}$.* |
+| *Figure 4: Ideal simulation result histogram with 1000 shots. X axis stands for the collapsed basis states after measurement. Y asis stands for the frequency, or counts, or the this states. Note that in qiskit, qubits are ordered using little-endian notation, so 001 means q0 collapse to 1, and q1, q2 collapse to 0,   011 means q0,q1 collapse to $\ket{1}$, and q2 collapse to 0.* |
 
 
 
@@ -266,7 +266,7 @@ plot_histogram(output) #Plot the result
 
 | <img src="Figure/noisemodelexample.png" alt="Noisy simulation histogram" width="300"/> |
 |:--------------------------------------------------------------------------:|
-| *Figure 5: The simulation result with a customized noise model.*      |
+| *Figure 5: The simulation result with a customized noise model, with noise strength set as 0.1. Compare with the ideal(noise-free) simulation, there are more unexpected collapsed states, such as 000,101. You can tune up the noise parameter, and see how this distribution varies accordingly.*      |
 
 
 
@@ -313,7 +313,7 @@ The transpiled circuit looks like this:
 
 | <img src="Figure/transpiled_circuit.png" alt="Transpiled circuit diagram" width="350"/> |
 |:--------------------------------------------------------------------------:|
-| *Figure 6: Transpiled circuit for the fake backend. On the leftside of the figure, $q_0 \rightarrow 0$ means $q_0$ is mapped to real physical qubit labelled 0. *      |
+| *Figure 6: Transpiled circuit for the fake backend. On the leftside of the figure, q0->0 means q0 is mapped to real physical qubit labelled 0. *      |
 
 
 
