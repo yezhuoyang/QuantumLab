@@ -48,6 +48,17 @@ python testPhaseEstimation.py
 
 
 
+### Grading Policy for Lab2
+
+Your grade for **Lab3: Accuracy of Quantum Phase Estimation** will be determined based on both the correctness of your implementations and your ability to analyze simulation results. Points are distributed as follows:
+
+1. **Correct implementation of qc4** — 10 points  
+3. **Compute the probability of success** — 10 points  
+2. **Correct implementation of qc4improved** — 10 points  
+
+**Total: 100 points**
+
+You are encouraged to use the provided autotests to validate your solutions before submission. In addition to correctness, partial credit will be awarded for clear explanations of your simulation results and design choices.
 
 
 
