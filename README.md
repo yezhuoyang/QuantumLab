@@ -236,7 +236,7 @@ plot_histogram(output) #Plot the result
 
 | <img src="Figure/histogram.png" alt="Simulation result histogram" width="300"/> |
 |:--------------------------------------------------------------------------:|
-| *Figure 4: Ideal simulation result histogram with 1000 shots. X axis stands for the collapsed basis states after measurement. Y asis stands for the frequency, or counts, or the this states. Note that in qiskit, qubits are ordered using little-endian notation, so 001 means q0 collapse to 1, and q1, q2 collapse to 0,   011 means q0,q1 collapse to $\ket{1}$, and q2 collapse to 0.* |
+| *Figure 4: Ideal simulation result histogram with 1000 shots. X axis stands for the collapsed basis states after measurement. Y asis stands for the frequency, or counts, or the this states. Note that in qiskit, qubits are ordered using little-endian notation, so 001 means q0 collapse to 1, and q1, q2 collapse to 0,   011 means q0,q1 collapse to 1, and q2 collapse to 0.* |
 
 
 
@@ -313,7 +313,7 @@ The transpiled circuit looks like this:
 
 | <img src="Figure/transpiled_circuit.png" alt="Transpiled circuit diagram" width="350"/> |
 |:--------------------------------------------------------------------------:|
-| *Figure 6: Transpiled circuit for the fake backend. On the leftside of the figure, q0->0 means q0 is mapped to real physical qubit labelled 0. *      |
+| *Figure 6: Transpiled circuit for the fake backend. On the leftside of the figure, q0->0 means q0 is mapped to real physical qubit labelled 0.*      |
 
 
 
