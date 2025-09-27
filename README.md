@@ -361,7 +361,11 @@ The result of the above simulation is:
 Here are some relevant references for the lab.
 
 
+
 * [Qiskit Documentation](https://qiskit.org/documentation/)  
 * Michael A. Nielsen and Isaac L. Chuang, *Quantum Computation and Quantum Information*, Cambridge University Press, 2010.  
 * [Qiskit Textbook: Learn Quantum Computation Using Qiskit](https://qiskit.org/textbook/)  
-* John Preskill, *Lecture Notes for Physics 219: Quantum Computation* (Caltech), available online.  
+* John Preskill, *Lecture Notes for Physics 219: Quantum Computation* (Caltech), available online.
+* Gidney, Craig. "How to factor 2048 bit RSA integers with less than a million noisy qubits." arXiv preprint arXiv:2505.15917 (2025).
+* Gidney, Craig, and Martin Ekerå. "How to factor 2048 bit RSA integers in 8 hours using 20 million noisy qubits." Quantum 5 (2021): 433.
+
