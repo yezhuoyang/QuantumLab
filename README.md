@@ -146,7 +146,7 @@ qc.draw('mpl',filename='filename.png')
 
 <!-- ![alt text](Figure/qcexample.png) -->
 
-<p align="center"> <img src="Figure/qcexample.png" alt="Example quantum circuit diagram" width="300"/><br> <em>Figure 1: Example circuit visualization in Qiskit</em> </p>
+<p align="center"> <img src="Figure/qcexample.png" alt="Example quantum circuit diagram" width="200"/><br> <em>Figure 1: Example circuit visualization in Qiskit</em> </p>
 
 
 If you want to see the unitary matrix representation of your circuit:
@@ -291,7 +291,7 @@ fig.savefig('Figure/layout.png')
 
 
 
-<p align="center"> <img src="Figure/layout.png" alt="Circuit layout mapping" width="300"/><br> <em>Figure 7: Mapping of virtual qubits to physical qubits</em> </p> 
+<p align="center"> <img src="Figure/layout.png" alt="Circuit layout mapping" width="200"/><br> <em>Figure 7: Mapping of virtual qubits to physical qubits</em> </p> 
 
 
 
