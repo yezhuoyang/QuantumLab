@@ -76,29 +76,30 @@ jupyter notebook
 
 # Basic of qiskit
 
-Here we will explore some most important interface that is related to the homework. To have a better understanding, you can copy and execute all the code snippets to jupyter notebook and play around with it by yourselves.
+
+In this section, we will explore the key Qiskit interfaces relevant to the homework.  
+For a better understanding, copy the code snippets into a Jupyter notebook and experiment with them on your own.
 
 
 ## Circuit construction and visualization
-To initialize a quantum circuit with qiskit, import qiskit package and use QuantumCircuit function:
 
+To initialize a quantum circuit in Qiskit, import the package and use the `QuantumCircuit` class:
 
 ```python
 from qiskit import QuantumCircuit
 qc=QuantumCircuit(3,2) # Initialize a circuit with 3 qubits and 2 classical bits
 ```
 
-To add quantum gate to the quantum circuit, you can either 
+You can add quantum gates to the circuit directly with built-in methods:
+
+
 ```python
 qc.x(0) #Add PauliX gate to qubit 0
 qc.h(1) #Add Hadamard gate to qubit 1
 qc.cx(0,1) #Add a CNOT gate to qubit 0,1 controlled by qubit 0
 ```
 
-
-
-
-Or by calling method append method:
+Alternatively, you can use the append method:
 
 ```python
 from qiskit.circuit.library import XGate,HGate,CXGate
@@ -108,7 +109,8 @@ qc.append(CXGate(),[0,1]) #Add a CNOT gate to qubit 0,1 controlled by qubit 0
 ```
 
 
-To append a small user defined quantum circuit to a larger one, you can also use the method append:
+You can also append a small user-defined subcircuit to a larger circuit:
+
 
 ```python
 from qiskit import QuantumCircuit
@@ -128,12 +130,15 @@ subqc.cx(0,1)
 qc.append(subqc,[1,2]) 
 ```
 
-Visualization is a good way to debug your circuit interactively. Qiskit has implemented a built-in method draw for visualization:
+Visualization is a useful way to debug your circuit interactively.
+Qiskit provides a built-in draw method:
+
+
 ```python
 qc.draw('mpl')
 ```
 
-Sometimes you may want to store the figure to your local computer, to do that, pass another parameter filename to the draw method:
+To save the diagram as an image file, include a filename:
 
 ```python
 qc.draw('mpl',filename='filename.png')
@@ -142,7 +147,7 @@ qc.draw('mpl',filename='filename.png')
 ![alt text](Figure/qcexample.png)
 
 
-If you are curious about the matrix of your circuit, you can get it by running the following commands:
+If you want to see the unitary matrix representation of your circuit:
 
 ```python
 from qiskit.quantum_info import Operator
@@ -152,18 +157,21 @@ print(U.data)
 
 
 
-
-
 ![alt text](Figure/subqc.png)
 
 
 ## Run simulation and plot results
 
-QuantumCircuit class that we initialized above won't calculate automatically for you. To execute your circuit, you have to run it by yourselves.
-A quantum citcuit in qiskit has both quantum registers and classical registers, the measurement result is stored in classical register.
+The `QuantumCircuit` we created above does not execute automatically.  
+To run a circuit, you must explicitly **simulate** it.  
+
+A Qiskit circuit consists of both **quantum registers** and **classical registers**.  
+Measurement results are stored in the classical registers.  
+
+When running a simulation, don’t forget to **add measurement operations**:
 
 
-To run simulation, don't foget to add measurement:
+
 
 ```python
 from qiskit import QuantumCircuit
@@ -180,10 +188,9 @@ qc.draw("mpl")
 ![alt text](Figure/measurement.png)
 
 
-To run the ideal simulation and get the result, we need to include a backend AerSimulator
+To run an **ideal (noise-free) simulation** and obtain the results, we use the `AerSimulator` backend.  
+You can run the following code:
 
-
-you can run the following codes:
 ```python
 from qiskit_aer import AerSimulator
 from qiskit.visualization import plot_histogram
@@ -199,10 +206,12 @@ plot_histogram(output) #Plot the result
 
 ## Simulation with customized noise model
 
-You are asked to run your circuit simulation with some noise level.
 
+In this part of the lab, you will run your circuit under a **noisy simulation**.  
+We use a custom noise model to introduce bit-flip and phase-flip errors at specified probabilities.
 
-you can run the following codes:
+Example:
+
 ```python
 from qiskit_aer import AerSimulator
 from qiskit.visualization import plot_histogram
@@ -219,8 +228,8 @@ plot_histogram(output) #Plot the result
 
 ## Simulation on fake provider
 
-In this lab, you are required to run your simulation on IBM fake provider, which simulate the real noisy environment on a superconducting quantum computer. 
-
+In this lab, you are also required to run simulations on an **IBM fake provider**, which mimics the behavior of a real noisy superconducting quantum computer.
+Next, transpile the circuit for the backend and run the simulation:
 
 ```python
 from qiskit import QuantumCircuit, transpile
@@ -249,12 +258,13 @@ counts = job.result().get_counts()
 plot_histogram(counts)
 ```
 
-The transpiled circuit is shown as:
+
+The transpiled circuit looks like this:
 
 ![alt text](Figure/transpiled_circuit.png)
 
+You can also visualize how the virtual qubits in your circuit are mapped to the physical qubits of the backend:
 
-You can also draw the layout and visulize the mapping of the virtual qubit to the real qubit by:
 
 ```python
 from qiskit.visualization import plot_circuit_layout
