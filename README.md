@@ -138,25 +138,26 @@ Qiskit provides a built-in draw method:
 qc.draw('mpl')
 ```
 
+
+| <img src="Figure/qcexample.png" alt="Example circuit diagram" width="200"/> |
+|:--------------------------------------------------------------------------:|
+| *Figure 1: The output visualization of the defined circuit Example. Qiskit both dipicts quantum registers(q) and classcal registers(c).*                        |
+
+
+
+
+| <img src="Figure/subqc.png" alt="Example circuit diagram" width="300"/> |
+|:--------------------------------------------------------------------------:|
+| *Figure 2: A user defined circuit with a sub-circuit inside*                     
+
+
 To save the diagram as an image file, include a filename:
 
 ```python
 qc.draw('mpl',filename='filename.png')
 ```
 
-<!-- ![alt text](Figure/qcexample.png) -->
 
-
-| ![Example quantum circuit diagram](Figure/qcexample.png) |
-|:-------------------------------------------------------:|
-| *Figure 1: The output visualization of the defined circuit Example. Qiskit both dipicts quantum registers(q) and classcal registers(c).*     |
-
-<!-- <div align="center" style="border:1px solid #0c2255ff; padding:10px; margin:15px 0;">
-
-<img src="Figure/qcexample.png" alt="Example quantum circuit diagram" width="200"/><br>
-<em>Figure 1: The output visualization of the defined circuit Example. Qiskit both dipicts quantum registers(q) and classcal registers(c).</em>
-
-</div> -->
 
 
 If you want to see the unitary matrix representation of your circuit:
@@ -167,11 +168,6 @@ U = Operator(qc)
 print(U.data)
 ```
 
-
-
-<!-- ![alt text](Figure/subqc.png) -->
-
-<p align="center"> <img src="Figure/subqc.png" alt="Matrix representation of subcircuit" width="300"/><br> <em>Figure 2: Matrix representation of the subcircuit</em> </p>
 
 
 ## Run simulation and plot results
@@ -201,7 +197,11 @@ qc.draw("mpl")
 
 <!-- ![alt text](Figure/measurement.png) -->
 
-<p align="center"> <img src="Figure/measurement.png" alt="Circuit with measurements" width="300"/><br> <em>Figure 3: Adding measurement operations</em> </p>
+
+| <img src="Figure/measurement.png" alt="Circuit with measurements" width="300"/> |
+|:--------------------------------------------------------------------------:|
+| *Figure 3: Adding measurement operations*                        |
+
 
 
 To run an **ideal (noise-free) simulation** and obtain the results, we use the `AerSimulator` backend.  
@@ -216,9 +216,11 @@ output = job.result().get_counts()
 plot_histogram(output) #Plot the result
 ```
 
-<p align="center"> <img src="Figure/histogram.png" alt="Simulation result histogram" width="300"/><br> <em>Figure 4: Ideal simulation result histogram</em> </p>
 
-<!-- ![alt text](Figure/histogram.png) -->
+| <img src="Figure/histogram.png" alt="Simulation result histogram" width="300"/> |
+|:--------------------------------------------------------------------------:|
+| *Figure 4: Ideal simulation result histogram with 1000 shots. X axis stands for the collapsed basis states after measurement. Y asis stands for the frequency, or counts, or the this states*      |
+
 
 
 
@@ -244,7 +246,13 @@ plot_histogram(output) #Plot the result
 <!-- ![alt text](Figure/noisemodelexample.png) -->
 
 
-<p align="center"> <img src="Figure/noisemodelexample.png" alt="Noisy simulation histogram" width="300"/><br> <em>Figure 5: Simulation with a customized noise model</em> </p>
+
+| <img src="Figure/noisemodelexample.png" alt="Noisy simulation histogram" width="300"/> |
+|:--------------------------------------------------------------------------:|
+| *Figure 5: The simulation result with a customized noise model.*      |
+
+
+
 
 ## Simulation on fake provider
 
@@ -284,7 +292,13 @@ The transpiled circuit looks like this:
 <!-- ![alt text](Figure/transpiled_circuit.png) -->
 
 
-<p align="center"> <img src="Figure/transpiled_circuit.png" alt="Transpiled circuit diagram" width="300"/><br> <em>Figure 6: Transpiled circuit for the fake backend</em> </p>
+
+
+| <img src="Figure/transpiled_circuit.png" alt="Transpiled circuit diagram" width="300"/> |
+|:--------------------------------------------------------------------------:|
+| *Figure 6: Transpiled circuit for the fake backend*      |
+
+
 
 You can also visualize how the virtual qubits in your circuit are mapped to the physical qubits of the backend:
 
@@ -300,14 +314,19 @@ fig.savefig('Figure/layout.png')
 <!-- ![alt text](Figure/layout.png) -->
 
 
+| <img src="Figure/layout.png" alt="Circuit layout mapping" width="200"/> |
+|:--------------------------------------------------------------------------:|
+| *Figure 7: Mapping of virtual qubits to physical qubits*      |
 
-<p align="center"> <img src="Figure/layout.png" alt="Circuit layout mapping" width="200"/><br> <em>Figure 7: Mapping of virtual qubits to physical qubits</em> </p> 
 
 
 
 The result of the above simulation is:
 
-<p align="center"> <img src="Figure/histogramnoise.png" alt="Noisy simulation histogram" width="300"/><br> <em>Figure 8: Simulation result on a fake provider</em> </p>
+| <img src="Figure/histogramnoise.png" alt="Noisy simulation histogram" width="300"/> |
+|:--------------------------------------------------------------------------:|
+| *Figure 8: Simulation result on a fake provider*      |
+
 
 
 <!-- ![alt text](Figure/histogramnoise.png) -->
