@@ -1,6 +1,6 @@
 # QuantumLab
 
-This is the lab repository for the **Quantum Programming course (CS238)** taught by Professor Jens Palsberg in the Fall 2024 quarter.  
+This is the lab repository for the **Quantum Programming course (CS238)** taught by Professor Jens Palsberg in the Fall 2025 quarter in UCLA.  
 In this lab, you will gain hands-on experience with **quantum programming using Qiskit**.  
 
 You will:
