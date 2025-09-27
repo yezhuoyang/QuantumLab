@@ -146,7 +146,7 @@ qc.draw('mpl',filename='filename.png')
 
 <!-- ![alt text](Figure/qcexample.png) -->
 
-<p align="center"> <img src="Figure/qcexample.png" alt="Example quantum circuit diagram" width="500"/><br> <em>Figure 1: Example circuit visualization in Qiskit</em> </p>
+<p align="center"> <img src="Figure/qcexample.png" alt="Example quantum circuit diagram" width="300"/><br> <em>Figure 1: Example circuit visualization in Qiskit</em> </p>
 
 
 If you want to see the unitary matrix representation of your circuit:
@@ -161,7 +161,7 @@ print(U.data)
 
 <!-- ![alt text](Figure/subqc.png) -->
 
-<p align="center"> <img src="Figure/subqc.png" alt="Matrix representation of subcircuit" width="500"/><br> <em>Figure 2: Matrix representation of the subcircuit</em> </p>
+<p align="center"> <img src="Figure/subqc.png" alt="Matrix representation of subcircuit" width="300"/><br> <em>Figure 2: Matrix representation of the subcircuit</em> </p>
 
 
 ## Run simulation and plot results
@@ -191,7 +191,7 @@ qc.draw("mpl")
 
 <!-- ![alt text](Figure/measurement.png) -->
 
-<p align="center"> <img src="Figure/measurement.png" alt="Circuit with measurements" width="500"/><br> <em>Figure 3: Adding measurement operations</em> </p>
+<p align="center"> <img src="Figure/measurement.png" alt="Circuit with measurements" width="300"/><br> <em>Figure 3: Adding measurement operations</em> </p>
 
 
 To run an **ideal (noise-free) simulation** and obtain the results, we use the `AerSimulator` backend.  
@@ -206,7 +206,7 @@ output = job.result().get_counts()
 plot_histogram(output) #Plot the result
 ```
 
-<p align="center"> <img src="Figure/histogram.png" alt="Simulation result histogram" width="500"/><br> <em>Figure 4: Ideal simulation result histogram</em> </p>
+<p align="center"> <img src="Figure/histogram.png" alt="Simulation result histogram" width="300"/><br> <em>Figure 4: Ideal simulation result histogram</em> </p>
 
 <!-- ![alt text](Figure/histogram.png) -->
 
@@ -234,7 +234,7 @@ plot_histogram(output) #Plot the result
 <!-- ![alt text](Figure/noisemodelexample.png) -->
 
 
-<p align="center"> <img src="Figure/noisemodelexample.png" alt="Noisy simulation histogram" width="500"/><br> <em>Figure 5: Simulation with a customized noise model</em> </p>
+<p align="center"> <img src="Figure/noisemodelexample.png" alt="Noisy simulation histogram" width="300"/><br> <em>Figure 5: Simulation with a customized noise model</em> </p>
 
 ## Simulation on fake provider
 
@@ -274,7 +274,7 @@ The transpiled circuit looks like this:
 <!-- ![alt text](Figure/transpiled_circuit.png) -->
 
 
-<p align="center"> <img src="Figure/transpiled_circuit.png" alt="Transpiled circuit diagram" width="500"/><br> <em>Figure 6: Transpiled circuit for the fake backend</em> </p>
+<p align="center"> <img src="Figure/transpiled_circuit.png" alt="Transpiled circuit diagram" width="300"/><br> <em>Figure 6: Transpiled circuit for the fake backend</em> </p>
 
 You can also visualize how the virtual qubits in your circuit are mapped to the physical qubits of the backend:
 
@@ -287,12 +287,20 @@ fig=plot_circuit_layout(transpiled_circuit,backend)
 fig.savefig('Figure/layout.png')
 ```
 
-![alt text](Figure/layout.png)
+<!-- ![alt text](Figure/layout.png) -->
+
+
+
+<p align="center"> <img src="Figure/layout.png" alt="Circuit layout mapping" width="300"/><br> <em>Figure 7: Mapping of virtual qubits to physical qubits</em> </p> 
+
 
 
 The result of the above simulation is:
 
-![alt text](Figure/histogramnoise.png)
+<p align="center"> <img src="Figure/histogramnoise.png" alt="Noisy simulation histogram" width="300"/><br> <em>Figure 8: Simulation result on a fake provider</em> </p>
+
+
+<!-- ![alt text](Figure/histogramnoise.png) -->
 
 
 
