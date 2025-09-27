@@ -165,7 +165,7 @@ qc.draw('mpl')
 
 | <img src="Figure/subqc.png" alt="Example circuit diagram" width="300"/> |
 |:--------------------------------------------------------------------------:|
-| *Figure 2: A user defined circuit with a sub-circuit inside*                     
+| *Figure 2: A user defined circuit with a sub circuit(subqc) inside. The subqc is seen as a subroutine called by the upper-level circuit. And qiskit will not display the detailed implementation. Such modularization help you better organize a complicatet quantum circuit.*                     
 
 
 To save the diagram as an image file, include a filename:
@@ -217,7 +217,7 @@ qc.draw("mpl")
 
 | <img src="Figure/measurement.png" alt="Circuit with measurements" width="300"/> |
 |:--------------------------------------------------------------------------:|
-| *Figure 3: Adding measurement operations*                        |
+| *Figure 3: Adding measurement operations to a quantum circuit. In qiskit, all measurement outcome must be stored in a classical bit(Where the measurement dashboards point to)*                        |
 
 
 
@@ -236,7 +236,7 @@ plot_histogram(output) #Plot the result
 
 | <img src="Figure/histogram.png" alt="Simulation result histogram" width="300"/> |
 |:--------------------------------------------------------------------------:|
-| *Figure 4: Ideal simulation result histogram with 1000 shots. X axis stands for the collapsed basis states after measurement. Y asis stands for the frequency, or counts, or the this states*      |
+| *Figure 4: Ideal simulation result histogram with 1000 shots. X axis stands for the collapsed basis states after measurement. Y asis stands for the frequency, or counts, or the this states. Note that in qiskit, qubits are ordered using little-endian notation, so 001 means q0 collapse to $\ket{1}$, and q1, q2 collapse to $\ket{0}$,   011 means q0,q1 collapse to $\ket{1}$, and q2 collapse to $\ket{0}$.* |
 
 
 
@@ -311,9 +311,9 @@ The transpiled circuit looks like this:
 
 
 
-| <img src="Figure/transpiled_circuit.png" alt="Transpiled circuit diagram" width="300"/> |
+| <img src="Figure/transpiled_circuit.png" alt="Transpiled circuit diagram" width="350"/> |
 |:--------------------------------------------------------------------------:|
-| *Figure 6: Transpiled circuit for the fake backend*      |
+| *Figure 6: Transpiled circuit for the fake backend. On the leftside of the figure, $q_0 \rightarrow 0$ means $q_0$ is mapped to real physical qubit labelled 0. *      |
 
 
 
@@ -333,7 +333,7 @@ fig.savefig('Figure/layout.png')
 
 | <img src="Figure/layout.png" alt="Circuit layout mapping" width="200"/> |
 |:--------------------------------------------------------------------------:|
-| *Figure 7: Mapping of virtual qubits to physical qubits*      |
+| *Figure 7: Mapping of virtual qubits to physical qubits. All edges are connection between physical qubits on a real 2d quantum hardware. Two qubit gates are supported between two qubits only if they are connected. The black vertices with indices are mapped, while the rest blue vertices are still free.*      |
 
 
 
@@ -342,7 +342,7 @@ The result of the above simulation is:
 
 | <img src="Figure/histogramnoise.png" alt="Noisy simulation histogram" width="300"/> |
 |:--------------------------------------------------------------------------:|
-| *Figure 8: Simulation result on a fake provider*      |
+| *Figure 8: You can also simulation a transpiled circuit on a fakeprovider. This result is more realistic as hardware constraints are considered.*      |
 
 
 
