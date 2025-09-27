@@ -67,12 +67,12 @@ You are encouraged to use the provided autotests to validate your solutions befo
 
 
 In this lab, you will implement a scalable version of Shor’s Algorithm.
-Specifically, you will build circuits for factoring 15, 21, and 63.
+Specifically, you will build circuits for factoring 15, and 21.
 
 We provide the implementation for factoring 15.
-You are required to implement the versions for 21 and 63.
+You are required to implement the versions for 21.
 
-To run the autotests for Shor21 and Shor63, copy your implementations into test/testShor.py and execute:
+To run the autotests for Shor21, copy your implementations into test/testShor.py and execute:
 
 ```console
 cd test
@@ -84,12 +84,11 @@ python testShor.py
 
 Your grade for **Lab3: Scalable Shor’s Algorithm** will be determined based on both the correctness of your implementations and your ability to analyze simulation results. Points are distributed as follows:
 
-1. **Build test circuit for 7X mod 15** — 10 points  
+1. **Build test circuit for 7X mod 15** — 15 points  
 2. **Verify that U^(2^2) = I** — 10 points  
-3. **Execute the reduced circuit for 7X mod 15** — 10 points  
-4. **Perform noisy simulation of `shor_Orig` and `shor_QPE` for N=15, and explain the results** — 10 points  
-5. **Redo the lab for N=21** — 30 points  
-6. **Redo the lab for N=63** — 30 points  
+3. **Execute the reduced circuit for 7X mod 15** — 15 points  
+4. **Perform noisy simulation of `shor_Orig` and `shor_QPE` for N=15, and explain the results** — 20 points  
+5. **Redo the lab for N=21** — 40 points  
 
 **Total: 100 points**
 

@@ -269,5 +269,5 @@ if __name__ == '__main__':
     print("-----------Starting the tests of IBM Lab3: Scalable Shor's algorithm-----------")
     #testMod15()
     testMod21()
-    testMod63()
+    #testMod63()
     print("--------------------------Your score is:--------------------------")    

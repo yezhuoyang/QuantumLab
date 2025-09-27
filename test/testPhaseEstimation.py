@@ -120,6 +120,6 @@ def testqc4improved():
 if __name__ == '__main__':
     print("-----------Strating the tests of IBM Lab2: Quantum phase estimation-----------")
     testqc4()
-    testqc4improved()
+    #testqc4improved()
     #print("--------------------------Your score is:--------------------------")    
 
