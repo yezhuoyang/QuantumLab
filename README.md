@@ -1,31 +1,34 @@
 # QuantumLab
-This is the lab repo of quantum progamming course CS238 taught by professor Jens Palsberg in 2024 Fall quarter.
-In this lab, you will have hands-on experience of quantum programming with qiskit. 
 
-In this lab, you will
+This is the lab repository for the **Quantum Programming course (CS238)** taught by Professor Jens Palsberg in the Fall 2024 quarter.  
+In this lab, you will gain hands-on experience with **quantum programming using Qiskit**.  
 
-* Learn how to create and compile a quantum circuit by yourselves with qiskit.
-* Learn how to run and debug your quantum circuit by running simulation.
-* Get more familiar with quantum gates, quantum fourier transform, quantum phase estimation and shor's algorithm
-* Learn how to run simulation of your quantum algorithm on a noisy fake quantum computer provided by qiskit.
+You will:
+
+* Learn how to create and compile quantum circuits with Qiskit.  
+* Learn how to run and debug circuits using simulation.  
+* Become familiar with quantum gates, the Quantum Fourier Transform (QFT), Quantum Phase Estimation (QPE), and Shor’s Algorithm.  
+* Learn how to simulate your algorithms on noisy backends and fake quantum computers provided by Qiskit.  
+
+---
 
 
 # Environment set up
 
+The installation process has been tested with **Python 3.11**.  
+If you encounter issues, please downgrade to Python 3.11:  
 
-The installation process has been tested under python version 3.11
-If there is some bug during your installation, please downgrade your python to 3.11 first
+👉 [Download Python 3.11](https://www.python.org/downloads/release/python-3110/)
 
-https://www.python.org/downloads/release/python-3110/
+It is recommended to use a **lightweight virtual environment** to avoid dependency conflicts.  
 
-
-I suggest that you should create a new lightweight virtual environment to avoid conflict of packgae dependency.
-First, please ensure that you have installed virtialenv:
+First, install `virtualenv`:
 
 ```console
 python -m pip install --user virtualenv
 python -m virtualenv --help
 ```
+
 
 You can visit the document page of virtualenv to get more detailed explanation of how this works:
 [Documentation of virtualenv](https://virtualenv.pypa.io/en/stable/installation.html)
@@ -274,10 +277,11 @@ The result of the above simulation is:
 # IBM Lab1: Quantum Circuits
 
 
-In this lab, you will learn and practice how to create quantum circuit and implement basic logic gates, such as AND, OR, XOR gate. 
-We will grade you partly by the correctness of logical gate implementation.
+In this lab, you will learn how to create quantum circuits and implement basic logic gates such as AND, OR, and XOR.  
+Grading will be based in part on the correctness of your logic gate implementations.
 
-To run autotest your self for function NOT,AND,NAND,OR,ANDOR for yourself, you can copy your implemention to test/testlogic.py file and excute the script directly.
+To run the autotests for functions `NOT`, `AND`, `NAND`, `OR`, and `ANDOR`, copy your implementation into `test/testlogic.py` and execute:
+
 
 ```console
 cd test
@@ -291,9 +295,9 @@ python testlogic.py
 
 # IBM Lab2: Accuracy of Quantum Phase Estimation
 
-In this lab, you will implement quantum phase estimtation.
-To run autotest by yourself for function qc4, qc4improved for yourself, you can copy your implemention to test/testPhaseEstimation.py file and excute the script directly.
+In this lab, you will implement **Quantum Phase Estimation (QPE)**.
 
+To run the autotests for your implementations of qc4 and qc4improved, copy your code into test/testPhaseEstimation.py and execute:
 ```console
 cd test
 python testPhaseEstimation.py
@@ -303,8 +307,13 @@ python testPhaseEstimation.py
 # IBM Lab3: Scalable Shor's algorithm
 
 
-In this lab, you will learn how to implement scalable shor's algorithm. Specifically, you will implement the Shor's algorithm of factoring 15,21 and 63.
-We will provide you the function and circuit of factoring 15. You are asked to implement the rest two. To run autotest by yourself, you can copy your implementation of Shor21,Shor63 to test/testShor.py file and excute the script directly:
+In this lab, you will implement a scalable version of Shor’s Algorithm.
+Specifically, you will build circuits for factoring 15, 21, and 63.
+
+We provide the implementation for factoring 15.
+You are required to implement the versions for 21 and 63.
+
+To run the autotests for Shor21 and Shor63, copy your implementations into test/testShor.py and execute:
 
 ```console
 cd test
@@ -315,8 +324,13 @@ python testShor.py
 
 
 
-
-
-
 # Reference
 
+
+Here are some relevant references for the lab.
+
+
+* [Qiskit Documentation](https://qiskit.org/documentation/)  
+* Michael A. Nielsen and Isaac L. Chuang, *Quantum Computation and Quantum Information*, Cambridge University Press, 2010.  
+* [Qiskit Textbook: Learn Quantum Computation Using Qiskit](https://qiskit.org/textbook/)  
+* John Preskill, *Lecture Notes for Physics 219: Quantum Computation* (Caltech), available online.  
