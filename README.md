@@ -13,6 +13,23 @@ You will:
 ---
 
 
+# Repository Structure
+
+The repository is organized into the following folders and files:
+
+- **Figure/**  
+  Contains all figures and images used in the README file.
+
+- **Labs/**  
+  Includes the three Jupyter notebooks(Lab1:QuantumCircuit.ipynb, Lab2:PhaseEstimation.ipynb, Lab3:ShorsAlg.ipynb) that you are required to complete as part of the lab assignments.
+
+- **test/**  
+  Stores all test scripts used to automatically verify your implementations.
+
+- **util/**  
+  Provides helper code, such as utilities for constructing noise models and fake backends. These codes are reused in the noisy simulation.
+
+
 # Environment set up
 
 The installation process has been tested with **Python 3.11**.  
